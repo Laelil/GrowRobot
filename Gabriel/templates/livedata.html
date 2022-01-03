@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" 
+		content="width=device-width,
+		initial-scale=1.0">
+		<title>MSP Plant Growth Box</title>
+     	<link rel="stylesheet" href='../static/stylesLD.css'/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+        <script src="https://cdn.plot.ly/plotly-2.8.1.min.js"></script>
+
+   </head>
+   <body>
+	   <!-- Navbar Section -->
+		<nav class="navbar">
+			<div class="navbar__container">
+				<a href="index.html" id="navbar__logo"><i class="fas fa-leaf"></i>Plant Growth Box</a>
+				<div class="navbar__toggle" id="mobile-menu">
+					<span class="bar" ></span>
+					<span class="bar" ></span>
+					<span class="bar" ></span>
+				</div>
+				<ul class="navbar__menu" >
+					<li class="navbar__item">
+						<a href="index.html" class="navbar__links">Idea</a>
+					</li>
+					<li class="navbar__item">
+						<a href="index.html" class="navbar__links">Approach</a>
+					</li>
+					<li class="navbar__item">
+						<a href="index.html" class="navbar__links">The Build</a>
+					</li>
+					<li class="navbar__item">
+						<a href="index.html" class="navbar__links">Findings</a>
+					</li>
+					<li class="navbar__item">
+						<a href="livedata.html" class="navbar__links">Live Data</a>
+					</li>
+					<li class="navbar__item">
+						<a href="index.html" class="navbar__links">Meet the Team</a>
+					</li>
+					<li class="navbar__btn">
+						<a href="index.html" class="button">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Graph Section -->
+        <div class="graph__main">
+            <div class="text__data">
+                <h1>Last Sensor reading: {{ time }} </h1>
+                <h1>Humidity: {{ hum }} Temperature: {{ temp }}</h1>
+            </div>
+            <div class="graph__container">
+                
+                <div class="column">
+                    <div id="tester"></div>
+                    <script>
+                        TESTER = document.getElementById('tester');
+                        Plotly.newPlot( TESTER, [{
+                        x: [1, 2, 3, 4, 5],
+                        y: [1, 2, 4, 8, 16] }], {
+                        margin: { t: 0 } } );
+                    </script>
+                </div>
+                <div class="column">
+                    <div id="tester1"></div>
+                    <script>
+                        TESTER = document.getElementById('tester1');
+                        Plotly.newPlot( TESTER, [{
+                        x: [1, 2, 3, 4, 5],
+                        y: [1, 2, 4, 8, 16] }], {
+                        margin: { t: 0 } } );
+                    </script>
+                </div>                
+                </div>         
+            </div>
+        </div>
+
+		<!--Footer Section-->
+		<div class="footer__container">
+			<div class="social__media">
+				<div class="social__media--wrap">
+					<div class="footer__logo">
+						<a href="/" id="footer__logo"><i class="fas fa-leaf"></i>Plant Growth Box</a>
+					</div>
+					<p class="website__rights">
+						© AIPGB 2021. All rights reserved.
+					</p>
+					<div class="social__icons">
+						<a href="/" class="social__icon--link" target="_blank">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="/" class="social__icon--link" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="/" class="social__icon--link" target="_blank">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+   </body>
+</html>
+
+
+
+
